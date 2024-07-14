@@ -1,0 +1,381 @@
+:root{
+    --primary-color:red;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ===================== custom  ===================== */
+.main-title{
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color:var(--primary-color);
+    letter-spacing: 1px;
+    padding-top: 15px;
+}
+.main-sub-title{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/* ===================== custom  ===================== */
+
+/* ===================== hero section ===================== */
+.hero-title{
+    padding-top: 25%;
+    color:var(--primary-color);
+}
+.hero-title2{
+    margin-top: 1.5rem;
+    font-weight: bold;
+}
+.hero-button{
+    background-color:var(--primary-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 10px;
+    color: white;
+    padding: 10px 15px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    border: none;
+}
+.site-image img{
+    width: 100%;
+    height: 85%;
+    padding-top: 20px;
+}
+/* ===================== hero section ===================== */
+
+/* ===================== login section ===================== */
+.form-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    background-color: #fff;
+    width: 40%;
+    max-width: 800px;
+    padding: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+.popup.popup.active .form-box{
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%,-50%);
+}
+.popup .overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+.popup.active .overlay{
+    display: block;
+}
+.popup .close-button{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.form-box .form-heading{
+    font-size: 25px;
+    font-weight: bold;
+}
+.form-box form .form-row{
+    display: flex;
+    padding: 15px 0px;
+}
+.form-box form .check-row{
+    display: flex;
+    padding: 15px 15px 0px 6px;
+}
+form .form-row .inputBox{
+    width: 100%;
+    height: 40px;
+    margin: 0 10px;
+    position: relative;
+}
+input[type="checkbox"]{
+    margin-left: 5px;
+    border: 2px solid var(--primary-color);
+}
+input[type="checkbox"]:checked{
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+.check-label{
+    margin-left: 10px;
+    color: grey;
+    font-weight: 600;
+}
+.inputBox input{
+    display: block;
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+    outline: none;
+    font-weight: 600;
+}
+.inputBox input:focus ~ label,
+.inputBox input:valid ~ label{
+    transform: translateY(-20px);
+    font-size: 14px;
+}
+.inputBox label{
+    position: absolute;
+    bottom: 10px;
+    font-size: 16px;
+    pointer-events: none;
+    color: grey;
+    transition: all 0.3s ease;
+}
+.submit-btn .inputBox{
+    height: 45px !important;
+    width: 100%;
+    overflow: hidden;
+}
+.submit-btn .inputBox .inner{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: -100%;
+}
+.submit-btn .inputBox input{
+    position: relative;
+    z-index: 2;
+    background: var(--primary-color);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+/* ===================== login section ===================== */
+
+/* =====================  what we do section ===================== */
+.section-2{
+    min-height: 100vh;
+}
+.swiper-box{
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    width: 15rem;
+    height: 23rem;
+    margin: 1rem;
+}
+.swiper-box::before{
+    content: "";
+    position: absolute;
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.4s linear;
+}
+.swiper-box:hover::before{
+    opacity: 1;
+}
+.swiper-box img{
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s linear;
+}
+.swiper-box:hover img{
+    opacity: 0;
+    transform: scale(3);
+}
+.swiper-box .box-content{
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    transform: translateY(-50%) scale(0);
+    position: absolute;
+    top: 52%;
+    left: 0;
+    transition: all 0.4s linear;
+}
+.swiper-box:hover .box-content{
+    transform: translateY(-50%) scale(1);
+}
+.swiper-box .box-content i{
+    color: #fff;
+    font-size: 35px;
+    margin: 15px 0;
+}
+.swiper-box .box-content .swiper-title{
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.swiper-box .box-content .swiper-description{
+    font-size: 12px;
+    display: block;
+}
+.swiper-btn{
+    font-size: 10px;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    padding: 10px 18px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-top: 1rem;
+    background-color: #fff;
+    text-decoration: none;
+}
+.fa-solid.fa-arrow-right-long.b {
+    font-size: 10px;
+    color: var(--primary-color);
+    margin-top: 2rem;
+}
+/* =====================  what we do section ===================== */
+
+/* =====================  our projects ===================== */
+.section-3{
+    padding-bottom: 20px;
+}
+.left-side{
+    padding: 5px 20px;
+    height: 100%;
+    margin-top: 20px;
+}
+.left-side .details{
+    padding: 20px;
+    height: 150px;
+    width: 100%;
+    cursor: pointer;
+    background: rgb(245, 245, 245);
+}
+.left-side .details.active{
+    background: var(--primary-color);
+    color: #fff;
+}
+.left-side .details-title{
+    font-size: 20px;
+    font-weight: bold;
+}
+.left-side p{
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 500;
+    margin-right: 2rem;
+}
+.context img{
+    height: 28rem;
+    width: 100%;
+    margin-top: 25px;
+}
+.context{
+    display: none;
+    animation: moving .5s ease;
+}
+@keyframes moving{
+    from{
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+.context.active{
+    display: block;
+}
+/* =====================  our projects ===================== */
+
+
+/* ===================== expert growth section ===================== */
+.section-4{
+    padding: 10px 0px;
+}
+.number .box i{
+    font-size: 25px;
+    color: var(--primary-color);
+    display: inline-block;
+    margin: 10px;
+}
+.box{
+    background-color: #fff;
+    width: 12em;
+    height: 10rem;
+    margin: .8rem;
+    padding: 15px;
+    transition: transform 0.1s;
+}
+.box:hover{
+    transform: scale(1.1);
+}
+/* =====================  expert growth section ===================== */
+
+/* ==================== footer section ==================== */
+.footer{
+    height: 2rem;
+}
+/* ==================== footer section ==================== */
+
+/* ==================== media query ==================== */
+@media(max-width : 700px){
+    .hero-title{
+        padding-top: 5%;
+        font-size: 16px;
+    }
+    .hero-title2{
+        font-size: 1.3rem;
+    }
+    .main-sub-title{
+        font-family: 1rem;
+    }
+    .form-box{
+        margin-top: 4rem;
+        width: 25rem;
+    }
+    .form-box form .form-row {
+        display: flex;
+        flex-direction: row;
+        display: block;
+        padding: 0;
+    }
+    .form-row .inputBox{
+        margin: 35px 0!important;
+    }
+    .form-box .text{
+        font-size: 30px;
+    }
+    .left-side{
+        padding: 5px 10px;
+        height: 100%;
+        margin-top: 20px;
+    }
+    .left-side .details{
+        padding: 15px;
+        height: 150px;
+        width: 100%;
+        cursor: pointer;
+        background: rgb(245, 245, 245);
+    }
+}
+/* ==================== media query ==================== */
+
